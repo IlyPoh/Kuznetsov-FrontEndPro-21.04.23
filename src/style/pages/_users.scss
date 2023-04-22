@@ -1,0 +1,17 @@
+.users {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
