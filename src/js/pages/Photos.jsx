@@ -15,7 +15,6 @@ export const Photos = () => {
         .then((response) => response.json())
         .catch((error) => console.log(error));
 
-      console.log(data);
       setPhotos(data);
     };
 
