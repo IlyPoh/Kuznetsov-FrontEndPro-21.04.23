@@ -20,5 +20,14 @@
       display: flex;
       gap: 1.25rem;
     }
+
+    a {
+      transition: font-weight $defaultTransition;
+
+      &.active {
+        font-weight: 700;
+        color: $color-orange;
+      }
+    }
   }
 }

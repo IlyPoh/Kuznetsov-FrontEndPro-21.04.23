@@ -1,9 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import logo from '../../images/logo.png';
 
 export const Header = () => {
+  function getNavLinkClassName({ isActive, isPending }) {
+    return isPending ? 'pending' : isActive ? 'active' : '';
+  }
+
   return (
     <header className="header">
       <div className="container">
@@ -15,10 +19,14 @@ export const Header = () => {
         <nav className="header-nav">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/" className={getNavLinkClassName}>
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <NavLink to="/users" className={getNavLinkClassName}>
+                Users
+              </NavLink>
             </li>
           </ul>
         </nav>
