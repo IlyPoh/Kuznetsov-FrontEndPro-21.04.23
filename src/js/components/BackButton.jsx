@@ -1,10 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const BackButton = () => {
+export const BackButton = (props) => {
+  const { link } = props;
   const navigation = useNavigate();
+
   const handleGoBack = () => {
-    navigation(-1);
+    if (link) {
+      navigation(link);
+    } else {
+      navigation(-1);
+    }
   };
 
   return (

@@ -20,7 +20,7 @@ export const Users = () => {
   return (
     <>
       <div className="container">
-        <BackButton />
+        <BackButton link="/" />
         <h1>Users</h1>
         <div className="users">
           {Users.map((user) => (

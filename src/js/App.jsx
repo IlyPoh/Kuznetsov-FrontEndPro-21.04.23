@@ -1,9 +1,9 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
 import { Layout } from './pages/Layout';
+import { Routes, Route } from 'react-router-dom';
+import { Albums, Home, NotFound, Photos, Users } from './pages';
 
 import '../style/app.scss';
-import { Albums, Home, NotFound, Photos, Users } from './pages';
 
 function App() {
   return (

@@ -24,7 +24,7 @@ export const Albums = () => {
   return (
     <>
       <div className="container">
-        <BackButton />
+        <BackButton link="/users" />
         <h1>Albums</h1>
         <div className="albums">
           {Albums.map((album) => (

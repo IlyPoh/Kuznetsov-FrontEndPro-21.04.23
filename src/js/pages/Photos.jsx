@@ -5,7 +5,8 @@ import { BackButton } from '../components/BackButton';
 export const Photos = () => {
   const [Photos, setPhotos] = useState([]);
 
-  const { albumId } = useParams();
+  const { userId, albumId } = useParams();
+  console.log(userId);
 
   useEffect(() => {
     const fetchPhotos = async () => {
@@ -24,7 +25,7 @@ export const Photos = () => {
   return (
     <>
       <div className="container">
-        <BackButton />
+        <BackButton link={`/users/${userId}/albums`} />
         <h1>Photos</h1>
         <div className="photos">
           {Photos.map((photo) => (
