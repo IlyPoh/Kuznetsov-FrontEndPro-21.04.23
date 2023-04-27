@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BackButton } from '../components/BackButton';
+import { ApiKey } from '../helpers/data';
 
 export const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     async function fetchUsers() {
-      const data = await fetch('https://jsonplaceholder.typicode.com/users')
+      const data = await fetch(`${ApiKey}/users`)
         .then((response) => response.json())
         .catch((error) => console.log(error));
 

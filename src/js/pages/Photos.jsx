@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { BackButton } from '../components/BackButton';
+import { ApiKey } from '../helpers/data';
 
 export const Photos = () => {
   const [photos, setPhotos] = useState([]);
@@ -10,9 +11,7 @@ export const Photos = () => {
 
   useEffect(() => {
     const fetchPhotos = async () => {
-      const data = await fetch(
-        `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`
-      )
+      const data = await fetch(`${ApiKey}/photos?albumId=${albumId}`)
         .then((response) => response.json())
         .catch((error) => console.log(error));
 
