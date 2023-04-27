@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { BackButton } from '../components/BackButton';
 
 export const Albums = () => {
-  const [Albums, setAlbums] = useState([]);
+  const [albums, setAlbums] = useState([]);
 
   const { userId } = useParams();
 
@@ -27,7 +27,7 @@ export const Albums = () => {
         <BackButton link="/users" />
         <h1>Albums</h1>
         <div className="albums">
-          {Albums.map((album) => (
+          {albums?.map((album) => (
             <div key={album.id} className="album">
               <div className="album-title">
                 {album.id}. {album.title}

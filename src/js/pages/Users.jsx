@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { BackButton } from '../components/BackButton';
 
 export const Users = () => {
-  const [Users, setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     async function fetchUsers() {
@@ -23,7 +23,7 @@ export const Users = () => {
         <BackButton link="/" />
         <h1>Users</h1>
         <div className="users">
-          {Users.map((user) => (
+          {users?.map((user) => (
             <div key={user.id} className="user">
               <div className="user-name">{user.name}</div>
               <Link
