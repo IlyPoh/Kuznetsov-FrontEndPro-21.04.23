@@ -4,19 +4,13 @@
   color: $color-white;
 }
 html {
-  min-height: 100vh;
-  overflow-x: hidden;
+  min-height: 100%;
 }
 body {
-  min-height: 100vh;
+  min-height: 100%;
   font-family: $ff-poppins;
   font-size: 16px;
   background: $color-grey;
-}
-.container {
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
 }
 a {
   transition: color 0.3s ease;
@@ -24,4 +18,45 @@ a {
   &:hover {
     color: $color-orange;
   }
+}
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+  position: relative;
+}
+.content {
+  margin-bottom: 2rem;
+
+  h1,
+  .h1 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @media (min-width: 425px) {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 13px;
+  box-shadow: inset 0px 0 5px $color-shadow;
+}
+
+::-webkit-scrollbar-track {
+  margin: 1px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid $color-orange;
 }

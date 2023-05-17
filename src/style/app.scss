@@ -6,3 +6,13 @@
 // sections
 @import 'sections/header';
 @import 'sections/footer';
+
+// components
+@import 'components/button';
+
+// pages
+@import 'pages/home';
+@import 'pages/users';
+@import 'pages/albums';
+@import 'pages/photos';
+@import 'pages/error';

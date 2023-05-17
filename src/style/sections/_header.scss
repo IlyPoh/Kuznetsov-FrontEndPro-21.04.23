@@ -1,0 +1,33 @@
+.header {
+  border-bottom: 1px solid $color-orange;
+  margin-bottom: 2rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    img {
+      max-width: 100px;
+      height: auto;
+    }
+  }
+  &-nav {
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    a {
+      transition: font-weight $defaultTransition;
+
+      &.active {
+        font-weight: 700;
+        color: $color-orange;
+      }
+    }
+  }
+}
